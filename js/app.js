@@ -32,7 +32,7 @@ const newMenuBarItem = () => {
 window.onscroll = function() {
 	document.querySelectorAll("section").forEach(function(activeSection) {
     let ActiveState = menuBar.querySelector(`[data-nav=${active.id}]`);
-	if(active.getBoundingClientRect().top >= -350 && active.getBoundingClientRect().top <= 200){
+	if(activeSection.getBoundingClientRect().top >= -350 && activeSection.getBoundingClientRect().top <= 200){
 
     activeSection.classList.add("your-active-class");
     ActiveState.classList.add("your-active-section");
@@ -54,3 +54,4 @@ document.getElementById("addingButton").addEventListener("click", () => {
   addNewSection();
   newMenuBarItem();
 });
+
