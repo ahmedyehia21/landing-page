@@ -31,7 +31,7 @@ const newMenuBarItem = () => {
 //Section Active State
 window.onscroll = function() {
 	document.querySelectorAll("section").forEach(function(activeSection) {
-    let ActiveState = menuBar.querySelector(`[data-nav=${active.id}]`);
+    let ActiveState = menuBar.querySelector(`[data-nav=${activeSection.id}]`);
 	if(activeSection.getBoundingClientRect().top >= -350 && activeSection.getBoundingClientRect().top <= 200){
 
     activeSection.classList.add("your-active-class");
