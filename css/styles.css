@@ -221,8 +221,16 @@ to {
              rotate(-360deg);
 }
 }
-/*smooth scrolling to aimed section*/
+/*smooth scrolling to aimed section
 html {
   scroll-behavior: smooth;
+}*/
+
+/*highlighting the menu items according to the section we scroll to */
+
+.navbar__menu .your-active-section {
+  background: #6517be;
+  color: rgb(204, 203, 203);
+  transition: ease 0.5s all;
 }
 
