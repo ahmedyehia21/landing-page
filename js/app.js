@@ -55,3 +55,14 @@ document.getElementById("addingButton").addEventListener("click", () => {
   newMenuBarItem();
 });
 
+/*smooth scrolling to aimed section by js instead of css in last submission*/
+menuBar.addEventListener("click", (event) => {
+  event.preventDefault();
+  if (event.target.dataset.nav) {
+    
+    document.getElementById(event.target.dataset.nav).scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      location.hash = event.target.dataset.nav;
+    }, 300);
+  }
+});
